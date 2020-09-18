@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "heroku-buildpack-github-npmrc"
+exit 0
