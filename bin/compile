@@ -6,7 +6,7 @@ GITHUB_AUTH_TOKEN="$(cat $env_dir/GITHUB_AUTH_TOKEN)"
 
 if [ "GITHUB_AUTH_TOKEN" != "" ]; then
 	echo "-----> Creating .npmrc from env GITHUB_AUTH_TOKEN"
-	echo "@digital-advisor:registry=https://npm.pkg.github.com/:_authToken=$GITHUB_AUTH_TOKEN" > "$build_dir/.npmrc"
+	echo -e "@digital-advisor:registry=https://npm.pkg.github.com/ \n //npm.pkg.github.com/:_authToken=$GITHUB_AUTH_TOKEN" > "$build_dir/.npmrc"
 	exit 0
 else
   echo "GITHUB_AUTH_TOKEN not set!"
